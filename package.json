@@ -1,0 +1,56 @@
+{
+  "author": "Stefan Werfling",
+  "bugs": {
+    "url": "https://github.com/stefanwerfling/figtree-schemas/issues"
+  },
+  "dependencies": {
+    "vts": "git+https://github.com/OpenSourcePKG/vts.git"
+  },
+  "description": "Schemas for figtree",
+  "devDependencies": {
+    "@stylistic/eslint-plugin-ts": "^3.0.0",
+    "@types/node": "^22.15.18",
+    "@typescript-eslint/eslint-plugin": "^8.21.0",
+    "@typescript-eslint/parser": "^8.21.0",
+    "eslint": "^9.19.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-prefer-arrow": "^1.2.3",
+    "typescript": "^5.7.3"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "schemas.json"
+  ],
+  "homepage": "https://github.com/stefanwerfling/figtree-schemas#readme",
+  "keywords": [
+
+  ],
+  "main": "dist/index.js",
+  "name": "figtree_schemas",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stefanwerfling/figtree-schemas.git"
+  },
+  "scripts": {
+    "build": "npm run compile",
+    "compile": "tsc --project tsconfig.json",
+    "npm-check-updates": "npm-check-updates"
+  },
+  "type": "module",
+  "types": "dist/index.d.ts",
+  "version": "1.0.0",
+  "vtseditor": {
+    "exports": [
+      {
+        "schemaFile": "schemas.json",
+        "schemaPrefix": "Schema"
+      }
+    ]
+  }
+}
