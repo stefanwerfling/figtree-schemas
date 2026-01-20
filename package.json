@@ -25,7 +25,7 @@
     }
   },
   "files": [
-    "schemas.json"
+    "dist"
   ],
   "homepage": "https://github.com/stefanwerfling/figtree-schemas#readme",
   "keywords": [
@@ -39,8 +39,7 @@
   },
   "scripts": {
     "build": "npm run compile",
-    "compile": "tsc --project tsconfig.json",
-    "npm-check-updates": "npm-check-updates"
+    "compile": "tsc --project tsconfig.json"
   },
   "type": "module",
   "types": "dist/index.d.ts",
