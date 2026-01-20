@@ -25,7 +25,8 @@
     }
   },
   "files": [
-    "dist"
+    "dist",
+    "schemas.json"
   ],
   "homepage": "https://github.com/stefanwerfling/figtree-schemas#readme",
   "keywords": [
