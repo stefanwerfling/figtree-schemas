@@ -1473,12 +1473,12 @@
                   "type": "object",
                   "options": {
                     "not_export": false,
-                    "ignore_additional_items": false
+                    "ignore_additional_items": true
                   }
                 },
                 "pos": {
-                  "x": 940,
-                  "y": 311
+                  "x": 941,
+                  "y": 321
                 },
                 "fields": [
                   {
@@ -1528,8 +1528,8 @@
                   }
                 },
                 "pos": {
-                  "x": 514,
-                  "y": 312
+                  "x": 497,
+                  "y": 285
                 },
                 "fields": [
                   {

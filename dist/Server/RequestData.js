@@ -5,6 +5,9 @@ export const SchemaSessionUserData = Vts.object({
     role: Vts.optional(Vts.string()),
 }, {
     description: '',
+    objectSchema: {
+        ignoreAdditionalItems: true
+    }
 });
 export const SchemaSessionData = Vts.object({
     id: Vts.string(),

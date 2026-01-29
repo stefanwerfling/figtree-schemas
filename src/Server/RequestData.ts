@@ -9,6 +9,9 @@ export const SchemaSessionUserData = Vts.object({
     role: Vts.optional(Vts.string()),
 }, {
     description: '',
+    objectSchema: {
+        ignoreAdditionalItems: true
+    }
 });
 
 /**
