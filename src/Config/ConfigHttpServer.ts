@@ -56,6 +56,9 @@ export const SchemaConfigHttpServer = Vts.object({
     csrf: Vts.optional(SchemaConfigHttpServerCsrf),
 }, {
     description: '',
+    objectSchema: {
+        ignoreAdditionalItems: true
+    }
 });
 
 /**

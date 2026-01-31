@@ -126,8 +126,8 @@
                   }
                 },
                 "pos": {
-                  "x": 152,
-                  "y": 50
+                  "x": 153,
+                  "y": 52
                 },
                 "fields": [
                   {
@@ -229,6 +229,22 @@
                   "y": 468
                 },
                 "link_unid": ""
+              },
+              {
+                "unid": "e6521ec8-6335-432e-a1a0-c9ce0144fdbb",
+                "pos": {
+                  "x": 734,
+                  "y": 262
+                },
+                "link_unid": "dbcb39be-f755-4dbf-b147-e58a58b7903f"
+              },
+              {
+                "unid": "86b80c1c-49f4-4fa2-9af6-9d4974221a2c",
+                "pos": {
+                  "x": 805,
+                  "y": 48
+                },
+                "link_unid": "5c2e4fd7-62ed-46be-afe6-2a9cb05fe3a2"
               }
             ]
           },
@@ -747,7 +763,7 @@
                   "type": "object",
                   "options": {
                     "not_export": false,
-                    "ignore_additional_items": false
+                    "ignore_additional_items": true
                   }
                 },
                 "pos": {
