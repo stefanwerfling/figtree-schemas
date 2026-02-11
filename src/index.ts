@@ -52,6 +52,9 @@ export {
 export {
     SchemaDefaultReturn,
     DefaultReturn,
+    SchemaDefaultHandlerReturn,
+    DefaultHandlerReturn,
+    HandlerResultType,
 } from './Server/Routes/DefaultReturn.js';
 export {
     SchemaServiceStatusResponse,

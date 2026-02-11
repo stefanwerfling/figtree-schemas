@@ -7,7 +7,7 @@ export { SchemaConfigOptions, ConfigOptions, } from './Config/ConfigOptions.js';
 export { SchemaLoggerConfig, LoggerConfig, } from './Logger/LoggerConfig.js';
 export { SchemaPluginDefinition, PluginDefinition, } from './Plugin/PluginDefinition.js';
 export { SchemaProviderEntry, ProviderEntry, } from './Provider/ProviderEntry.js';
-export { SchemaDefaultReturn, DefaultReturn, } from './Server/Routes/DefaultReturn.js';
+export { SchemaDefaultReturn, DefaultReturn, SchemaDefaultHandlerReturn, DefaultHandlerReturn, HandlerResultType, } from './Server/Routes/DefaultReturn.js';
 export { SchemaServiceStatusResponse, ServiceStatusResponse, SchemaServiceByNameRequest, ServiceByNameRequest, } from './Server/Routes/Service.js';
 export { StatusCodes, } from './Server/Routes/StatusCodes.js';
 export { SchemaSessionUserData, SessionUserData, SchemaSessionData, SessionData, SchemaRequestData, RequestData, } from './Server/RequestData.js';

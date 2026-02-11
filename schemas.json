@@ -1253,8 +1253,8 @@
                       }
                     },
                     "pos": {
-                      "x": 136,
-                      "y": 96
+                      "x": 102,
+                      "y": 296
                     },
                     "fields": [
                       {
@@ -1294,9 +1294,76 @@
                       }
                     ],
                     "description": "Default response from server."
+                  },
+                  {
+                    "unid": "e7b32c10-d50f-4ab1-a410-09b05c4a17a5",
+                    "name": "DefaultHandlerReturn",
+                    "extend": {
+                      "type": "object",
+                      "options": {
+                        "not_export": false,
+                        "ignore_additional_items": false
+                      }
+                    },
+                    "pos": {
+                      "x": 76,
+                      "y": 506
+                    },
+                    "fields": [
+                      {
+                        "unid": "56bbb3a9-430e-45f8-851c-3a8fff98df36",
+                        "name": "type",
+                        "type": {
+                          "type": "4e959f36-dd44-4405-a4c9-3cfdb2963a2b",
+                          "optional": false,
+                          "array": false,
+                          "types": []
+                        },
+                        "description": ""
+                      },
+                      {
+                        "unid": "b9843a9a-e43a-476d-b9b9-b0f7e6f800b8",
+                        "name": "body",
+                        "type": {
+                          "type": "unknown",
+                          "optional": true,
+                          "array": false,
+                          "types": []
+                        },
+                        "description": ""
+                      }
+                    ],
+                    "description": ""
                   }
                 ],
-                "enums": [],
+                "enums": [
+                  {
+                    "unid": "4e959f36-dd44-4405-a4c9-3cfdb2963a2b",
+                    "name": "HandlerResultType",
+                    "pos": {
+                      "x": 535,
+                      "y": 466
+                    },
+                    "values": [
+                      {
+                        "unid": "a5b88aad-e3bf-4e80-b12c-9a706127f149",
+                        "name": "json",
+                        "value": "json"
+                      },
+                      {
+                        "unid": "7e2b80d0-2f5c-4a5b-9a6e-c06dd448422b",
+                        "name": "empty",
+                        "value": "empty"
+                      },
+                      {
+                        "unid": "11128fb9-cd37-45cd-884b-777f1e96380f",
+                        "name": "handled",
+                        "value": "handled"
+                      }
+                    ],
+                    "description": ""
+                  }
+                ],
                 "links": [
                   {
                     "unid": "92c4a63e-2455-4901-9e2c-89e2ea3e6a2c",
@@ -1309,8 +1376,8 @@
                   {
                     "unid": "ce72d06c-d002-41b6-a2b0-eb0940dd0a99",
                     "pos": {
-                      "x": 740,
-                      "y": 220
+                      "x": 531,
+                      "y": 34
                     },
                     "link_unid": "580ae090-16b8-40d2-8ea1-849c90537a8e"
                   }
@@ -1735,6 +1802,6 @@
     "enums": []
   },
   "editor": {
-    "controls_width": 300
+    "controls_width": 488
   }
 }
