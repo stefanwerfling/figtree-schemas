@@ -17,7 +17,7 @@ export declare enum ServiceImportance {
 export declare const SchemaServiceInfoScheduler: import("vts").ObjectSchema<{
     status: import("vts").EnumSchema<ServiceStatus>;
     inProcess: import("vts").BooleanSchema;
-    lastRun: import("vts").StringSchema<import("vts").StringSchemaOptions>;
+    lastRun: import("vts").OrSchema<import("vts").StringSchema<import("vts").StringSchemaOptions> | import("vts").NullSchema>;
     cron: import("vts").StringSchema<import("vts").StringSchemaOptions>;
 }>;
 export type ServiceInfoScheduler = ExtractSchemaResultType<typeof SchemaServiceInfoScheduler>;
@@ -32,7 +32,7 @@ export declare const SchemaServiceInfoEntry: import("vts").ObjectSchema<{
     scheduler: import("vts").OptionalSchema<import("vts").ObjectSchema<{
         status: import("vts").EnumSchema<ServiceStatus>;
         inProcess: import("vts").BooleanSchema;
-        lastRun: import("vts").StringSchema<import("vts").StringSchemaOptions>;
+        lastRun: import("vts").OrSchema<import("vts").StringSchema<import("vts").StringSchemaOptions> | import("vts").NullSchema>;
         cron: import("vts").StringSchema<import("vts").StringSchemaOptions>;
     }>>;
 }>;

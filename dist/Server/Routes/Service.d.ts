@@ -14,7 +14,7 @@ export declare const SchemaServiceStatusResponse: import("vts").ObjectSchema<{
         scheduler: import("vts").OptionalSchema<import("vts").ObjectSchema<{
             status: import("vts").EnumSchema<import("../../Service/ServiceInfoEntry.js").ServiceStatus>;
             inProcess: import("vts").BooleanSchema;
-            lastRun: import("vts").StringSchema<import("vts").StringSchemaOptions>;
+            lastRun: import("vts").OrSchema<import("vts").StringSchema<import("vts").StringSchemaOptions> | import("vts").NullSchema>;
             cron: import("vts").StringSchema<import("vts").StringSchemaOptions>;
         }>>;
     }>>>;

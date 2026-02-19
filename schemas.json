@@ -1463,8 +1463,8 @@
                   {
                     "unid": "dc4afcce-a448-4ae7-99cc-27d60a97515a",
                     "pos": {
-                      "x": 1154,
-                      "y": 162
+                      "x": 1091,
+                      "y": 387
                     },
                     "link_unid": "414e75c0-0eab-41cf-a704-6397c6344fee"
                   },
@@ -1865,10 +1865,23 @@
                     "unid": "025e35e1-e40c-4fa7-8b44-56cf03ada9e6",
                     "name": "lastRun",
                     "type": {
-                      "type": "string",
+                      "type": "or",
                       "optional": false,
                       "array": false,
-                      "types": []
+                      "types": [
+                        {
+                          "type": "datestring",
+                          "optional": false,
+                          "array": false,
+                          "types": []
+                        },
+                        {
+                          "type": "null",
+                          "optional": false,
+                          "array": false,
+                          "types": []
+                        }
+                      ]
                     },
                     "description": "Datestring for last run"
                   },
