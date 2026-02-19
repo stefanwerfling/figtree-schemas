@@ -11,7 +11,7 @@
         "name": "Args",
         "type": "folder",
         "icon": "folder",
-        "istoggle": true,
+        "istoggle": false,
         "entrys": [
           {
             "unid": "748b6f2e-38de-4e79-888b-26f98da55a94",
@@ -105,7 +105,7 @@
         "name": "Config",
         "type": "folder",
         "icon": "folder",
-        "istoggle": true,
+        "istoggle": false,
         "entrys": [
           {
             "unid": "066c3327-efd7-4bd4-b17e-ef914c814e21",
@@ -912,7 +912,7 @@
         "name": "Logger",
         "type": "folder",
         "icon": "folder",
-        "istoggle": true,
+        "istoggle": false,
         "entrys": [
           {
             "unid": "31b2da57-04dc-488e-a8ff-6aa4d241f7c0",
@@ -1031,7 +1031,7 @@
         "name": "Plugin",
         "type": "folder",
         "icon": "folder",
-        "istoggle": true,
+        "istoggle": false,
         "entrys": [
           {
             "unid": "eeac10b7-82e0-45a9-92a6-d1c4f327af27",
@@ -1161,7 +1161,7 @@
         "name": "Provider",
         "type": "folder",
         "icon": "folder",
-        "istoggle": true,
+        "istoggle": false,
         "entrys": [
           {
             "unid": "16cd25f7-d24c-497f-be2e-db6def2989c8",
@@ -1431,8 +1431,8 @@
                       }
                     },
                     "pos": {
-                      "x": 170,
-                      "y": 315
+                      "x": 167,
+                      "y": 280
                     },
                     "fields": [
                       {
@@ -1451,7 +1451,16 @@
                   }
                 ],
                 "enums": [],
-                "links": []
+                "links": [
+                  {
+                    "unid": "e8a99d9c-10b0-477a-a48e-a06b54f1b711",
+                    "pos": {
+                      "x": 728,
+                      "y": 52
+                    },
+                    "link_unid": "e39f54d3-0add-45fc-96b1-2c7815c6f679"
+                  }
+                ]
               },
               {
                 "unid": "855b7557-a71f-4831-bd3f-0e7164bbc56c",
@@ -1712,7 +1721,7 @@
                     "unid": "2ba545db-7561-474d-8c62-c7095fdf1872",
                     "name": "type",
                     "type": {
-                      "type": "number",
+                      "type": "a952b6bc-0704-4ef7-a056-61ca099d15d0",
                       "optional": false,
                       "array": false,
                       "types": []
@@ -1734,7 +1743,7 @@
                     "unid": "91ac5b46-b179-4658-bdc0-44ac9b058dfb",
                     "name": "status",
                     "type": {
-                      "type": "string",
+                      "type": "bb5cb66c-afeb-4ab9-86f6-5335b46b2627",
                       "optional": false,
                       "array": false,
                       "types": []
@@ -1756,7 +1765,7 @@
                     "unid": "7ac80de5-6745-4938-b88c-fdf31cab638c",
                     "name": "importance",
                     "type": {
-                      "type": "number",
+                      "type": "1f36d2bf-0856-4371-9007-949adb93c662",
                       "optional": false,
                       "array": false,
                       "types": []
@@ -1784,12 +1793,164 @@
                       "types": []
                     },
                     "description": "A service dependencie"
+                  },
+                  {
+                    "unid": "e36acc18-d725-417a-8952-7f3f78f86312",
+                    "name": "scheduler",
+                    "type": {
+                      "type": "414e75c0-0eab-41cf-a704-6397c6344fee",
+                      "optional": true,
+                      "array": false,
+                      "types": []
+                    },
+                    "description": "Scheduler service information"
                   }
                 ],
                 "description": "Service Entry information"
+              },
+              {
+                "unid": "414e75c0-0eab-41cf-a704-6397c6344fee",
+                "name": "ServiceInfoScheduler",
+                "extend": {
+                  "type": "object",
+                  "options": {
+                    "not_export": false,
+                    "ignore_additional_items": false
+                  }
+                },
+                "pos": {
+                  "x": 654,
+                  "y": 468
+                },
+                "fields": [
+                  {
+                    "unid": "f44b1ed8-c54f-44f5-975d-72b2a3c2f493",
+                    "name": "status",
+                    "type": {
+                      "type": "bb5cb66c-afeb-4ab9-86f6-5335b46b2627",
+                      "optional": false,
+                      "array": false,
+                      "types": []
+                    },
+                    "description": "Scheduler process status"
+                  },
+                  {
+                    "unid": "977f4617-40fe-45d6-b6ef-643e27a36ec7",
+                    "name": "inProcess",
+                    "type": {
+                      "type": "boolean",
+                      "optional": false,
+                      "array": false,
+                      "types": []
+                    },
+                    "description": "Is currently a process execute by scheduler"
+                  },
+                  {
+                    "unid": "025e35e1-e40c-4fa7-8b44-56cf03ada9e6",
+                    "name": "lastRun",
+                    "type": {
+                      "type": "datestring",
+                      "optional": false,
+                      "array": false,
+                      "types": []
+                    },
+                    "description": "Datestring for last run"
+                  },
+                  {
+                    "unid": "5a8a2ba9-8493-4e03-8e79-8bf1696b3098",
+                    "name": "cron",
+                    "type": {
+                      "type": "string",
+                      "optional": false,
+                      "array": false,
+                      "types": []
+                    },
+                    "description": "Show cron setting for scheduler"
+                  }
+                ],
+                "description": ""
               }
             ],
-            "enums": [],
+            "enums": [
+              {
+                "unid": "a952b6bc-0704-4ef7-a056-61ca099d15d0",
+                "name": "ServiceType",
+                "pos": {
+                  "x": 758,
+                  "y": 57
+                },
+                "values": [
+                  {
+                    "unid": "d5acc38a-7ed9-40eb-b773-d15a523ea377",
+                    "name": "runner",
+                    "value": "0"
+                  },
+                  {
+                    "unid": "9e496d4e-b85f-4374-afc9-c552f4b16614",
+                    "name": "scheduler",
+                    "value": "1"
+                  }
+                ],
+                "description": ""
+              },
+              {
+                "unid": "bb5cb66c-afeb-4ab9-86f6-5335b46b2627",
+                "name": "ServiceStatus",
+                "pos": {
+                  "x": 1112,
+                  "y": 199
+                },
+                "values": [
+                  {
+                    "unid": "67cee080-028c-4124-8375-9a466fef5d9f",
+                    "name": "None",
+                    "value": "none"
+                  },
+                  {
+                    "unid": "794bc283-0791-475e-afb1-dc9902f5cf50",
+                    "name": "Progress",
+                    "value": "progress"
+                  },
+                  {
+                    "unid": "78a74eb2-aabc-4de9-86b1-2f2fa030e5a9",
+                    "name": "Success",
+                    "value": "success"
+                  },
+                  {
+                    "unid": "7fba68dc-4b26-4833-81b9-797eaa71eb91",
+                    "name": "Error",
+                    "value": "error"
+                  }
+                ],
+                "description": ""
+              },
+              {
+                "unid": "1f36d2bf-0856-4371-9007-949adb93c662",
+                "name": "ServiceImportance",
+                "pos": {
+                  "x": 755,
+                  "y": 239
+                },
+                "values": [
+                  {
+                    "unid": "3ec0b587-2d9f-4b09-9c22-12fa3a4e252c",
+                    "name": "Optional",
+                    "value": "0"
+                  },
+                  {
+                    "unid": "0125103b-efe4-4170-9d0c-7b8b11cd9f4d",
+                    "name": "Important",
+                    "value": "1"
+                  },
+                  {
+                    "unid": "72263e79-d8e9-47f7-8200-a554a66b7c2c",
+                    "name": "Critical",
+                    "value": "2"
+                  }
+                ],
+                "description": ""
+              }
+            ],
             "links": []
           }
         ],

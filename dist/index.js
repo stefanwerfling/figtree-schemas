@@ -11,5 +11,5 @@ export { SchemaDefaultReturn, SchemaDefaultHandlerReturn, HandlerResultType, } f
 export { SchemaServiceStatusResponse, SchemaServiceByNameRequest, } from './Server/Routes/Service.js';
 export { StatusCodes, } from './Server/Routes/StatusCodes.js';
 export { SchemaSessionUserData, SchemaSessionData, SchemaRequestData, } from './Server/RequestData.js';
-export { SchemaServiceInfoEntry, } from './Service/ServiceInfoEntry.js';
+export { SchemaServiceInfoScheduler, SchemaServiceInfoEntry, ServiceType, ServiceStatus, ServiceImportance, } from './Service/ServiceInfoEntry.js';
 //# sourceMappingURL=index.js.map

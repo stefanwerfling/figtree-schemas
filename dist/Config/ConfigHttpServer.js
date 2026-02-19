@@ -7,7 +7,7 @@ export const SchemaConfigHttpServerSession = Vts.object({
     description: '',
 });
 export const SchemaConfigHttpServerProxy = Vts.object({
-    trust: Vts.or([Vts.string(), Vts.boolean(), Vts.array(Vts.string())]),
+    trust: Vts.or([Vts.string(), Vts.boolean(), Vts.array(Vts.string())], {}),
 }, {
     description: '',
 });

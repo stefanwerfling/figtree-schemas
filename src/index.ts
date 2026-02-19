@@ -74,6 +74,11 @@ export {
     RequestData,
 } from './Server/RequestData.js';
 export {
+    SchemaServiceInfoScheduler,
+    ServiceInfoScheduler,
     SchemaServiceInfoEntry,
     ServiceInfoEntry,
+    ServiceType,
+    ServiceStatus,
+    ServiceImportance,
 } from './Service/ServiceInfoEntry.js';
