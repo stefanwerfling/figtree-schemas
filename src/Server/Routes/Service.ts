@@ -6,7 +6,7 @@ import {SchemaServiceInfoEntry} from '../../Service/ServiceInfoEntry.js';
  * Schema of ServiceStatusResponse
  */
 export const SchemaServiceStatusResponse = SchemaDefaultReturn.extend({
-    services: Vts.array(SchemaServiceInfoEntry),
+    services: Vts.optional(Vts.array(SchemaServiceInfoEntry)),
 }, {
     description: '',
 });

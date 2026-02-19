@@ -3,7 +3,7 @@ export declare const SchemaServiceStatusResponse: import("vts").ObjectSchema<{
     statusCode: import("vts").OrSchema<import("vts").StringSchema<import("vts").StringSchemaOptions> | import("vts").EnumSchema<import("./StatusCodes.js").StatusCodes>>;
     msg: import("vts").OptionalSchema<import("vts").StringSchema<import("vts").StringSchemaOptions>>;
 } & {
-    services: import("vts").ArraySchema<import("vts").ObjectSchema<{
+    services: import("vts").OptionalSchema<import("vts").ArraySchema<import("vts").ObjectSchema<{
         type: import("vts").EnumSchema<import("../../Service/ServiceInfoEntry.js").ServiceType>;
         name: import("vts").StringSchema<import("vts").StringSchemaOptions>;
         status: import("vts").EnumSchema<import("../../Service/ServiceInfoEntry.js").ServiceStatus>;
@@ -17,7 +17,7 @@ export declare const SchemaServiceStatusResponse: import("vts").ObjectSchema<{
             lastRun: import("vts").StringSchema<import("vts").StringSchemaOptions>;
             cron: import("vts").StringSchema<import("vts").StringSchemaOptions>;
         }>>;
-    }>>;
+    }>>>;
 }>;
 export type ServiceStatusResponse = ExtractSchemaResultType<typeof SchemaServiceStatusResponse>;
 export declare const SchemaServiceByNameRequest: import("vts").ObjectSchema<{

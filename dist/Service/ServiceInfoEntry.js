@@ -20,7 +20,7 @@ export var ServiceImportance;
 export const SchemaServiceInfoScheduler = Vts.object({
     status: Vts.enum(ServiceStatus),
     inProcess: Vts.boolean({ description: 'Is currently a process execute by scheduler' }),
-    lastRun: Vts.dateString({ description: 'Datestring for last run' }),
+    lastRun: Vts.string({ description: 'Datestring for last run' }),
     cron: Vts.string({ description: 'Show cron setting for scheduler' }),
 }, {
     description: '',
