@@ -50,5 +50,21 @@ export declare const SchemaConfigBackendOptions: import("vts").ObjectSchema<{
             cookie: import("vts").BooleanSchema;
         }>>;
     }>;
+    cluster: import("vts").OptionalSchema<import("vts").ObjectSchema<{
+        enabled: import("vts").OptionalSchema<import("vts").BooleanSchema>;
+        workers: import("vts").OptionalSchema<import("vts").NumberSchema>;
+        roles: import("vts").OptionalSchema<import("vts").Object2Schema<import("vts").StringSchema<import("vts").StringSchemaOptions>, import("vts").NumberSchema>>;
+        shutdownTimeoutMs: import("vts").OptionalSchema<import("vts").NumberSchema>;
+        shutdownSignals: import("vts").OptionalSchema<import("vts").ArraySchema<import("vts").StringSchema<import("vts").StringSchemaOptions>>>;
+        respawn: import("vts").OptionalSchema<import("vts").ObjectSchema<{
+            backoffMs: import("vts").OptionalSchema<import("vts").ArraySchema<import("vts").NumberSchema>>;
+            maxPerWindow: import("vts").OptionalSchema<import("vts").NumberSchema>;
+            windowMs: import("vts").OptionalSchema<import("vts").NumberSchema>;
+        }>>;
+        sharedStore: import("vts").OptionalSchema<import("vts").ObjectSchema<{
+            type: import("vts").EnumSchema<import("./ConfigCluster.js").ClusterSharedStoreType>;
+            namespace: import("vts").OptionalSchema<import("vts").StringSchema<import("vts").StringSchemaOptions>>;
+        }>>;
+    }>>;
 }>;
 export type ConfigBackendOptions = ExtractSchemaResultType<typeof SchemaConfigBackendOptions>;

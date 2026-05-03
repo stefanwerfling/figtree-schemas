@@ -38,6 +38,18 @@ export {
     ConfigOptions,
 } from './Config/ConfigOptions.js';
 export {
+    SchemaConfigClusterRespawn,
+    ConfigClusterRespawn,
+    SchemaConfigClusterSharedStore,
+    ConfigClusterSharedStore,
+    SchemaConfigClusterRoles,
+    ConfigClusterRoles,
+    SchemaConfigCluster,
+    ConfigCluster,
+    ENV_CLUSTER,
+    ClusterSharedStoreType,
+} from './Config/ConfigCluster.js';
+export {
     SchemaLoggerConfig,
     LoggerConfig,
 } from './Logger/LoggerConfig.js';

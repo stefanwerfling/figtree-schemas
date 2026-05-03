@@ -4,6 +4,7 @@ export { SchemaConfigBackendOptions, } from './Config/ConfigBackendOptions.js';
 export { SchemaConfigDbOptionsMySql, SchemaConfigDbOptionsInflux, SchemaConfigDbOptionsRedis, SchemaConfigDbOptionsChroma, SchemaConfigDbOptions, ENV_DB, } from './Config/ConfigDb.js';
 export { SchemaConfigHttpServerSession, SchemaConfigHttpServerProxy, SchemaConfigHttpServerCsrf, SchemaConfigHttpServer, } from './Config/ConfigHttpServer.js';
 export { SchemaConfigOptions, } from './Config/ConfigOptions.js';
+export { SchemaConfigClusterRespawn, SchemaConfigClusterSharedStore, SchemaConfigClusterRoles, SchemaConfigCluster, ENV_CLUSTER, ClusterSharedStoreType, } from './Config/ConfigCluster.js';
 export { SchemaLoggerConfig, } from './Logger/LoggerConfig.js';
 export { SchemaPluginDefinition, } from './Plugin/PluginDefinition.js';
 export { SchemaProviderEntry, } from './Provider/ProviderEntry.js';

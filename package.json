@@ -16,7 +16,7 @@
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-prefer-arrow": "^1.2.3",
     "typescript": "^5.7.3",
-    "vtseditor": "git+https://github.com/stefanwerfling/vtseditor.git"
+    "vtseditor": "github:stefanwerfling/vtseditor"
   },
   "exports": {
     ".": {
@@ -30,9 +30,7 @@
     "schemas.json"
   ],
   "homepage": "https://github.com/stefanwerfling/figtree-schemas#readme",
-  "keywords": [
-
-  ],
+  "keywords": [],
   "main": "dist/index.js",
   "name": "figtree-schemas",
   "repository": {
@@ -41,11 +39,12 @@
   },
   "scripts": {
     "build": "npm run compile",
-    "compile": "tsc --project tsconfig.json"
+    "compile": "tsc --project tsconfig.json",
+    "update-vtseditor": "npm install git+https://github.com/stefanwerfling/vtseditor.git --force"
   },
   "type": "module",
   "types": "dist/index.d.ts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "vtseditor": {
     "exports": [
       {

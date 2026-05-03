@@ -11,7 +11,7 @@
         "name": "Args",
         "type": "folder",
         "icon": "folder",
-        "istoggle": false,
+        "istoggle": true,
         "entrys": [
           {
             "unid": "748b6f2e-38de-4e79-888b-26f98da55a94",
@@ -105,7 +105,7 @@
         "name": "Config",
         "type": "folder",
         "icon": "folder",
-        "istoggle": false,
+        "istoggle": true,
         "entrys": [
           {
             "unid": "066c3327-efd7-4bd4-b17e-ef914c814e21",
@@ -126,8 +126,8 @@
                   }
                 },
                 "pos": {
-                  "x": 153,
-                  "y": 52
+                  "x": 77,
+                  "y": 337
                 },
                 "fields": [
                   {
@@ -147,6 +147,17 @@
                     "type": {
                       "type": "dbcb39be-f755-4dbf-b147-e58a58b7903f",
                       "optional": false,
+                      "array": false,
+                      "types": []
+                    },
+                    "description": ""
+                  },
+                  {
+                    "unid": "fdec9c32-234e-4f7d-a671-f52d53c4ecf0",
+                    "name": "cluster",
+                    "type": {
+                      "type": "8b17c4f0-7322-4441-88bd-7743ba01a1bb",
+                      "optional": true,
                       "array": false,
                       "types": []
                     },
@@ -233,18 +244,34 @@
               {
                 "unid": "e6521ec8-6335-432e-a1a0-c9ce0144fdbb",
                 "pos": {
-                  "x": 734,
-                  "y": 262
+                  "x": 584,
+                  "y": 296
                 },
                 "link_unid": "dbcb39be-f755-4dbf-b147-e58a58b7903f"
               },
               {
                 "unid": "86b80c1c-49f4-4fa2-9af6-9d4974221a2c",
                 "pos": {
-                  "x": 805,
-                  "y": 48
+                  "x": 513,
+                  "y": 42
                 },
                 "link_unid": "5c2e4fd7-62ed-46be-afe6-2a9cb05fe3a2"
+              },
+              {
+                "unid": "18269483-94b0-40a5-913d-aaecf55f2b86",
+                "link_unid": "3ec71c52-2bda-42d6-be26-a499170b09fd",
+                "pos": {
+                  "x": 104,
+                  "y": 37
+                }
+              },
+              {
+                "unid": "2126f337-c1ae-4c2e-ab99-2d2492c59b8a",
+                "link_unid": "8b17c4f0-7322-4441-88bd-7743ba01a1bb",
+                "pos": {
+                  "x": 254,
+                  "y": 642
+                }
               }
             ]
           },
@@ -901,6 +928,280 @@
                 "link_unid": "d73610e1-3a1f-4250-a324-9cb6b9a13645"
               }
             ]
+          },
+          {
+            "unid": "31618cb3-66c5-47d7-9d36-814f8dd4f958",
+            "name": "ConfigCluster",
+            "type": "file",
+            "icon": "",
+            "istoggle": true,
+            "entrys": [],
+            "schemas": [
+              {
+                "unid": "eb3884a1-9556-4498-9f6b-f2062a892c4c",
+                "name": "ConfigClusterRespawn",
+                "description": "",
+                "extend": {
+                  "type": "object",
+                  "options": {
+                    "not_export": false,
+                    "ignore_additional_items": false
+                  }
+                },
+                "pos": {
+                  "x": 504,
+                  "y": 178
+                },
+                "fields": [
+                  {
+                    "unid": "cad75811-e72a-493e-a8b3-d90d9a0d2a5a",
+                    "name": "backoffMs",
+                    "type": {
+                      "type": "number",
+                      "optional": true,
+                      "array": true,
+                      "types": []
+                    },
+                    "description": "sequence of delays in ms for successive crashes within a window.\nThe last value is reused once the index exceeds the array length.                                                                                                                                                                                                                             \nDefault [0, 1000, 5000, 15000, 30000]."
+                  },
+                  {
+                    "unid": "3f55ff34-b97b-4ad6-bd8f-e3112229347d",
+                    "name": "maxPerWindow",
+                    "type": {
+                      "type": "number",
+                      "optional": true,
+                      "array": false,
+                      "types": []
+                    },
+                    "description": "if more than this many crashes happen within `windowMs`, the cluster halts (process.exit(1)). Default 5."
+                  },
+                  {
+                    "unid": "99293006-f104-4566-ba4d-b1632151c956",
+                    "name": "windowMs",
+                    "type": {
+                      "type": "number",
+                      "optional": true,
+                      "array": false,
+                      "types": []
+                    },
+                    "description": "rolling window for the circuit breaker. Default 60000."
+                  }
+                ]
+              },
+              {
+                "unid": "e118fb9e-3027-4740-b566-5d85ef996c61",
+                "name": "ConfigClusterSharedStore",
+                "description": "",
+                "extend": {
+                  "type": "object",
+                  "options": {
+                    "not_export": false,
+                    "ignore_additional_items": false
+                  }
+                },
+                "pos": {
+                  "x": 583,
+                  "y": 385
+                },
+                "fields": [
+                  {
+                    "unid": "9bd6a7f6-352d-43b4-8b2f-f54402ee5fab",
+                    "name": "type",
+                    "type": {
+                      "type": "fe6ccf4c-80a4-47ef-9fa4-76bd21e07dc2",
+                      "optional": false,
+                      "array": false,
+                      "types": []
+                    },
+                    "description": ""
+                  },
+                  {
+                    "unid": "05283200-7035-489c-beef-48c40296992b",
+                    "name": "namespace",
+                    "type": {
+                      "type": "string",
+                      "optional": true,
+                      "array": false,
+                      "types": []
+                    },
+                    "description": "key namespace prefix (default 'sharedstore')."
+                  }
+                ]
+              },
+              {
+                "unid": "8b17c4f0-7322-4441-88bd-7743ba01a1bb",
+                "name": "ConfigCluster",
+                "description": "",
+                "extend": {
+                  "type": "object",
+                  "options": {
+                    "not_export": false,
+                    "ignore_additional_items": false
+                  }
+                },
+                "pos": {
+                  "x": 47,
+                  "y": 138
+                },
+                "fields": [
+                  {
+                    "unid": "30ff634c-6b4e-4326-b0de-5b74efc99f0b",
+                    "name": "enabled",
+                    "type": {
+                      "type": "boolean",
+                      "optional": true,
+                      "array": false,
+                      "types": []
+                    },
+                    "description": "master switch - if false (or omitted) the backend runs single-process. Default false."
+                  },
+                  {
+                    "unid": "79967c20-6ead-4959-8dda-7bc138262501",
+                    "name": "workers",
+                    "type": {
+                      "type": "number",
+                      "optional": true,
+                      "array": false,
+                      "types": []
+                    },
+                    "description": "total worker count when no roles are configured. Defaults to os.cpus().length on the consumer side. Ignored when `roles` is set. "
+                  },
+                  {
+                    "unid": "5a99dd38-c359-495c-ac95-73839352f64b",
+                    "name": "roles",
+                    "type": {
+                      "type": "ce9d68d2-173b-4a63-9a09-aa06602e26f0",
+                      "optional": true,
+                      "array": false,
+                      "types": []
+                    },
+                    "description": "mapping of role name → worker count. Each worker receives the role via the WORKER_ROLE env variable."
+                  },
+                  {
+                    "unid": "64252ed5-4007-4ac1-85b3-2972a4ea49c0",
+                    "name": "shutdownTimeoutMs",
+                    "type": {
+                      "type": "number",
+                      "optional": true,
+                      "array": false,
+                      "types": []
+                    },
+                    "description": "time (ms) the master waits for workers to exit gracefully  before SIGKILL. Should be larger than the worker-side shutdown timeout. Default 15000."
+                  },
+                  {
+                    "unid": "c42debbb-900f-4f3d-88a9-4d97755faf60",
+                    "name": "shutdownSignals",
+                    "type": {
+                      "type": "string",
+                      "optional": true,
+                      "array": true,
+                      "types": []
+                    },
+                    "description": "process signals that trigger a graceful cluster shutdown. Default ['SIGTERM', 'SIGINT']."
+                  },
+                  {
+                    "unid": "7a6f4c3e-6f29-4fe4-88c7-e45f0a065c84",
+                    "name": "respawn",
+                    "type": {
+                      "type": "eb3884a1-9556-4498-9f6b-f2062a892c4c",
+                      "optional": true,
+                      "array": false,
+                      "types": []
+                    },
+                    "description": "crash backoff and circuit-breaker tuning."
+                  },
+                  {
+                    "unid": "5ff0e025-0c02-4f95-bc8f-12e988699cfa",
+                    "name": "sharedStore",
+                    "type": {
+                      "type": "e118fb9e-3027-4740-b566-5d85ef996c61",
+                      "optional": true,
+                      "array": false,
+                      "types": []
+                    },
+                    "description": "which SharedStore implementation to use cluster-wide."
+                  }
+                ]
+              },
+              {
+                "unid": "ce9d68d2-173b-4a63-9a09-aa06602e26f0",
+                "name": "ConfigClusterRoles",
+                "description": "",
+                "extend": {
+                  "type": "object2",
+                  "options": {
+                    "not_export": false,
+                    "ignore_additional_items": false
+                  },
+                  "value": "number"
+                },
+                "pos": {
+                  "x": 444,
+                  "y": 90
+                },
+                "fields": []
+              }
+            ],
+            "enums": [
+              {
+                "unid": "0580c8a0-d068-4c3b-a89c-ec7511f40894",
+                "name": "ENV_CLUSTER",
+                "description": "",
+                "pos": {
+                  "x": 934,
+                  "y": 594
+                },
+                "values": [
+                  {
+                    "unid": "844596ca-8c9a-4079-9271-9c8a62628474",
+                    "name": "CLUSTER_ENABLED",
+                    "value": "CLUSTER_ENABLED"
+                  },
+                  {
+                    "unid": "7b47990a-d3ab-4361-8fd2-63f0a5b74292",
+                    "name": "CLUSTER_WORKERS",
+                    "value": "CLUSTER_WORKERS"
+                  },
+                  {
+                    "unid": "a9ea523e-b889-41eb-be2e-5de7323b769a",
+                    "name": "CLUSTER_SHUTDOWN_TIMEOUT_MS",
+                    "value": "CLUSTER_SHUTDOWN_TIMEOUT_MS"
+                  },
+                  {
+                    "unid": "c7151802-31c5-4e1f-85ff-15b20633375d",
+                    "name": "CLUSTER_SHARED_STORE_TYPE",
+                    "value": "CLUSTER_SHARED_STORE_TYPE"
+                  },
+                  {
+                    "unid": "f3e23a54-e69e-4674-aa19-4fb2af3361e4",
+                    "name": "CLUSTER_SHARED_STORE_NAMESPACE",
+                    "value": "CLUSTER_SHARED_STORE_NAMESPACE"
+                  }
+                ]
+              },
+              {
+                "unid": "fe6ccf4c-80a4-47ef-9fa4-76bd21e07dc2",
+                "name": "ClusterSharedStoreType",
+                "description": "",
+                "pos": {
+                  "x": 938,
+                  "y": 51
+                },
+                "values": [
+                  {
+                    "unid": "863b3a5c-6ae1-41bd-96fb-91f74b6ca87c",
+                    "name": "IPC",
+                    "value": "ipc"
+                  },
+                  {
+                    "unid": "28218f31-24d3-46c6-8701-8ec47e7d6f68",
+                    "name": "Redis",
+                    "value": "redis"
+                  }
+                ]
+              }
+            ],
+            "links": []
           }
         ],
         "schemas": [],
@@ -1225,7 +1526,7 @@
         "name": "Server",
         "type": "folder",
         "icon": "folder",
-        "istoggle": true,
+        "istoggle": false,
         "entrys": [
           {
             "unid": "6282df2b-51d8-4d1e-a21b-eb4643eff31f",
@@ -1729,8 +2030,8 @@
                   }
                 },
                 "pos": {
-                  "x": 261,
-                  "y": 99
+                  "x": 117,
+                  "y": 62
                 },
                 "fields": [
                   {
@@ -1835,8 +2136,8 @@
                   }
                 },
                 "pos": {
-                  "x": 654,
-                  "y": 468
+                  "x": 571,
+                  "y": 512
                 },
                 "fields": [
                   {
@@ -1905,8 +2206,8 @@
                 "unid": "a952b6bc-0704-4ef7-a056-61ca099d15d0",
                 "name": "ServiceType",
                 "pos": {
-                  "x": 758,
-                  "y": 57
+                  "x": 556,
+                  "y": 11
                 },
                 "values": [
                   {
@@ -1957,8 +2258,8 @@
                 "unid": "1f36d2bf-0856-4371-9007-949adb93c662",
                 "name": "ServiceImportance",
                 "pos": {
-                  "x": 755,
-                  "y": 239
+                  "x": 543,
+                  "y": 253
                 },
                 "values": [
                   {
@@ -1992,6 +2293,7 @@
     "enums": []
   },
   "editor": {
-    "controls_width": 488
+    "controls_width": 488,
+    "active_entry_unid": "066c3327-efd7-4bd4-b17e-ef914c814e21"
   }
 }
