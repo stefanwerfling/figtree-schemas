@@ -1749,6 +1749,97 @@
                       }
                     ],
                     "description": "Service by name request"
+                  },
+                  {
+                    "unid": "7127ea23-7572-4ca1-a6ca-c7b520945687",
+                    "name": "ServiceLogStartRequest",
+                    "extend": {
+                      "type": "object",
+                      "options": {
+                        "not_export": false,
+                        "ignore_additional_items": false
+                      }
+                    },
+                    "pos": {
+                      "x": 167,
+                      "y": 420
+                    },
+                    "fields": [
+                      {
+                        "unid": "687ca4ef-b419-4e20-a37e-5998697b73ca",
+                        "name": "name",
+                        "type": {
+                          "type": "string",
+                          "optional": false,
+                          "array": false,
+                          "types": []
+                        },
+                        "description": "Name of the service whose buffer to enable"
+                      },
+                      {
+                        "unid": "24fd7c79-f4d1-4332-bf20-7042ccbe63e4",
+                        "name": "maxLines",
+                        "type": {
+                          "type": "number",
+                          "optional": true,
+                          "array": false,
+                          "types": []
+                        },
+                        "description": "Ring-buffer size; defaults to the server-side default when omitted"
+                      }
+                    ],
+                    "description": "Service log start request"
+                  },
+                  {
+                    "unid": "23b13a35-8058-43cc-9a26-584532c01a66",
+                    "name": "ServiceLogResponse",
+                    "extend": {
+                      "type": "7155c203-9ba0-4f9b-b7c9-0b7356c4e599",
+                      "options": {
+                        "not_export": false,
+                        "ignore_additional_items": false
+                      }
+                    },
+                    "pos": {
+                      "x": 167,
+                      "y": 560
+                    },
+                    "fields": [
+                      {
+                        "unid": "cf660800-8834-4feb-8a46-ba2802209c63",
+                        "name": "active",
+                        "type": {
+                          "type": "boolean",
+                          "optional": true,
+                          "array": false,
+                          "types": []
+                        },
+                        "description": "Is the buffer currently capturing for this service"
+                      },
+                      {
+                        "unid": "2c07ab7c-9b56-4562-8b1f-bcdf42cd373c",
+                        "name": "maxLines",
+                        "type": {
+                          "type": "number",
+                          "optional": true,
+                          "array": false,
+                          "types": []
+                        },
+                        "description": "Configured ring-buffer size"
+                      },
+                      {
+                        "unid": "3bc102de-2f00-4a69-94e5-bf7d5a51dbba",
+                        "name": "lines",
+                        "type": {
+                          "type": "90fee73d-b6ba-4ae9-987c-aec7fa1f7fd8",
+                          "optional": true,
+                          "array": true,
+                          "types": []
+                        },
+                        "description": "Captured log lines in chronological order"
+                      }
+                    ],
+                    "description": "Service log buffer snapshot"
                   }
                 ],
                 "enums": [],
@@ -2112,6 +2203,52 @@
                     "description": "A service dependencie"
                   },
                   {
+                    "unid": "d7f462e1-c88d-4918-a087-67911b0cbe40",
+                    "name": "startedAt",
+                    "type": {
+                      "type": "or",
+                      "optional": false,
+                      "array": false,
+                      "types": [
+                        {
+                          "type": "datestring",
+                          "optional": false,
+                          "array": false,
+                          "types": []
+                        },
+                        {
+                          "type": "null",
+                          "optional": false,
+                          "array": false,
+                          "types": []
+                        }
+                      ]
+                    },
+                    "description": "Datestring for the last successful start, null when the service has never started"
+                  },
+                  {
+                    "unid": "f337ea0e-d267-4528-ab98-c5c3d2c3871d",
+                    "name": "restartCount",
+                    "type": {
+                      "type": "number",
+                      "optional": false,
+                      "array": false,
+                      "types": []
+                    },
+                    "description": "Number of times the health monitor restarted this service after the initial startAll"
+                  },
+                  {
+                    "unid": "404dbfb7-43f7-494c-88e0-48442bca2099",
+                    "name": "logBufferActive",
+                    "type": {
+                      "type": "boolean",
+                      "optional": false,
+                      "array": false,
+                      "types": []
+                    },
+                    "description": "Is the per-service log buffer currently capturing"
+                  },
+                  {
                     "unid": "e36acc18-d725-417a-8952-7f3f78f86312",
                     "name": "scheduler",
                     "type": {
@@ -2184,7 +2321,101 @@
                         }
                       ]
                     },
-                    "description": "Datestring for last run"
+                    "description": "Datestring for last run (success or failure)"
+                  },
+                  {
+                    "unid": "b56ca483-7b8a-445f-b1c1-74a372ab9fe8",
+                    "name": "lastSuccessAt",
+                    "type": {
+                      "type": "or",
+                      "optional": false,
+                      "array": false,
+                      "types": [
+                        {
+                          "type": "datestring",
+                          "optional": false,
+                          "array": false,
+                          "types": []
+                        },
+                        {
+                          "type": "null",
+                          "optional": false,
+                          "array": false,
+                          "types": []
+                        }
+                      ]
+                    },
+                    "description": "Datestring for the last run that completed successfully"
+                  },
+                  {
+                    "unid": "c4f36c72-4dc6-4693-a776-a492398face2",
+                    "name": "nextRun",
+                    "type": {
+                      "type": "or",
+                      "optional": false,
+                      "array": false,
+                      "types": [
+                        {
+                          "type": "datestring",
+                          "optional": false,
+                          "array": false,
+                          "types": []
+                        },
+                        {
+                          "type": "null",
+                          "optional": false,
+                          "array": false,
+                          "types": []
+                        }
+                      ]
+                    },
+                    "description": "Datestring for the next planned run, null when scheduler is inactive"
+                  },
+                  {
+                    "unid": "a1cae943-82d1-4c77-b14f-1cbefc6a3b24",
+                    "name": "lastDurationMs",
+                    "type": {
+                      "type": "or",
+                      "optional": false,
+                      "array": false,
+                      "types": [
+                        {
+                          "type": "number",
+                          "optional": false,
+                          "array": false,
+                          "types": []
+                        },
+                        {
+                          "type": "null",
+                          "optional": false,
+                          "array": false,
+                          "types": []
+                        }
+                      ]
+                    },
+                    "description": "Wall-clock duration of the last run in milliseconds, null before the first run"
+                  },
+                  {
+                    "unid": "7198f858-75c2-4944-98f3-d90d0d5abb60",
+                    "name": "runCount",
+                    "type": {
+                      "type": "number",
+                      "optional": false,
+                      "array": false,
+                      "types": []
+                    },
+                    "description": "Number of runs (success + failure) since the service was last started"
+                  },
+                  {
+                    "unid": "23726d92-3f99-4001-999d-a6a49e36ed1f",
+                    "name": "failCount",
+                    "type": {
+                      "type": "number",
+                      "optional": false,
+                      "array": false,
+                      "types": []
+                    },
+                    "description": "Number of runs that threw out of _execute since the service was last started"
                   },
                   {
                     "unid": "5a8a2ba9-8493-4e03-8e79-8bf1696b3098",
@@ -2276,6 +2507,101 @@
                     "unid": "72263e79-d8e9-47f7-8200-a554a66b7c2c",
                     "name": "Critical",
                     "value": "2"
+                  }
+                ],
+                "description": ""
+              }
+            ],
+            "links": []
+          },
+          {
+            "unid": "37c295bd-8a48-4736-a03b-0b1a94edd235",
+            "name": "ServiceLog",
+            "type": "file",
+            "icon": "file",
+            "istoggle": false,
+            "entrys": [],
+            "schemas": [
+              {
+                "unid": "90fee73d-b6ba-4ae9-987c-aec7fa1f7fd8",
+                "name": "ServiceLogEntry",
+                "extend": {
+                  "type": "object",
+                  "options": {
+                    "not_export": false,
+                    "ignore_additional_items": false
+                  }
+                },
+                "pos": {
+                  "x": 120,
+                  "y": 80
+                },
+                "fields": [
+                  {
+                    "unid": "59c6da5e-3170-4ba9-b50d-46ba7375a8b9",
+                    "name": "ts",
+                    "type": {
+                      "type": "datestring",
+                      "optional": false,
+                      "array": false,
+                      "types": []
+                    },
+                    "description": "Datestring when the line was captured"
+                  },
+                  {
+                    "unid": "73eb1d70-d373-48e0-8691-c54f440166d8",
+                    "name": "level",
+                    "type": {
+                      "type": "b9612ba5-3b32-4979-8247-82a0bab14e13",
+                      "optional": false,
+                      "array": false,
+                      "types": []
+                    },
+                    "description": "Log level the line was emitted at"
+                  },
+                  {
+                    "unid": "a0826e55-e20e-4b46-9bff-cf8df5e96676",
+                    "name": "msg",
+                    "type": {
+                      "type": "string",
+                      "optional": false,
+                      "array": false,
+                      "types": []
+                    },
+                    "description": "Log message after string-formatting"
+                  }
+                ],
+                "description": "Per-service captured log line"
+              }
+            ],
+            "enums": [
+              {
+                "unid": "b9612ba5-3b32-4979-8247-82a0bab14e13",
+                "name": "ServiceLogLevel",
+                "pos": {
+                  "x": 520,
+                  "y": 80
+                },
+                "values": [
+                  {
+                    "unid": "650631fa-788f-4028-906d-ccf9cb1c261b",
+                    "name": "error",
+                    "value": "error"
+                  },
+                  {
+                    "unid": "0465e07a-c119-4a77-b245-9719dd82c698",
+                    "name": "warn",
+                    "value": "warn"
+                  },
+                  {
+                    "unid": "5373f735-7e8e-4d80-b05c-d6e5c10ef4ae",
+                    "name": "info",
+                    "value": "info"
+                  },
+                  {
+                    "unid": "1f3a3749-f767-455f-83ec-66332e0d0c6d",
+                    "name": "debug",
+                    "value": "debug"
                   }
                 ],
                 "description": ""

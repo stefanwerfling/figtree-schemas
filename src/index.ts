@@ -73,6 +73,10 @@ export {
     ServiceStatusResponse,
     SchemaServiceByNameRequest,
     ServiceByNameRequest,
+    SchemaServiceLogStartRequest,
+    ServiceLogStartRequest,
+    SchemaServiceLogResponse,
+    ServiceLogResponse,
 } from './Server/Routes/Service.js';
 export {
     StatusCodes,
@@ -94,3 +98,8 @@ export {
     ServiceStatus,
     ServiceImportance,
 } from './Service/ServiceInfoEntry.js';
+export {
+    SchemaServiceLogEntry,
+    ServiceLogEntry,
+    ServiceLogLevel,
+} from './Service/ServiceLog.js';

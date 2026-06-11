@@ -9,8 +9,9 @@ export { SchemaLoggerConfig, } from './Logger/LoggerConfig.js';
 export { SchemaPluginDefinition, } from './Plugin/PluginDefinition.js';
 export { SchemaProviderEntry, } from './Provider/ProviderEntry.js';
 export { SchemaDefaultReturn, SchemaDefaultHandlerReturn, HandlerResultType, } from './Server/Routes/DefaultReturn.js';
-export { SchemaServiceStatusResponse, SchemaServiceByNameRequest, } from './Server/Routes/Service.js';
+export { SchemaServiceStatusResponse, SchemaServiceByNameRequest, SchemaServiceLogStartRequest, SchemaServiceLogResponse, } from './Server/Routes/Service.js';
 export { StatusCodes, } from './Server/Routes/StatusCodes.js';
 export { SchemaSessionUserData, SchemaSessionData, SchemaRequestData, } from './Server/RequestData.js';
 export { SchemaServiceInfoScheduler, SchemaServiceInfoEntry, ServiceType, ServiceStatus, ServiceImportance, } from './Service/ServiceInfoEntry.js';
+export { SchemaServiceLogEntry, ServiceLogLevel, } from './Service/ServiceLog.js';
 //# sourceMappingURL=index.js.map
