@@ -414,6 +414,17 @@
                       "types": []
                     },
                     "description": "Settings for Chroma"
+                  },
+                  {
+                    "unid": "c742bac6-178f-470b-bcda-0e4a78b34a70",
+                    "name": "qdrant",
+                    "type": {
+                      "type": "b86980c1-e60e-4621-9d8c-bce5da2748dc",
+                      "optional": true,
+                      "array": false,
+                      "types": []
+                    },
+                    "description": "Settings for Qdrant"
                   }
                 ],
                 "description": ""
@@ -570,6 +581,35 @@
                   }
                 ],
                 "description": ""
+              },
+              {
+                "unid": "b86980c1-e60e-4621-9d8c-bce5da2748dc",
+                "name": "ConfigDbOptionsQdrant",
+                "extend": {
+                  "type": "object",
+                  "options": {
+                    "not_export": false,
+                    "ignore_additional_items": false
+                  }
+                },
+                "pos": {
+                  "x": 554,
+                  "y": 833
+                },
+                "fields": [
+                  {
+                    "unid": "2b80b2be-b752-466a-9077-90c23dad71b6",
+                    "name": "url",
+                    "type": {
+                      "type": "string",
+                      "optional": false,
+                      "array": false,
+                      "types": []
+                    },
+                    "description": ""
+                  }
+                ],
+                "description": ""
               }
             ],
             "enums": [
@@ -640,6 +680,11 @@
                     "unid": "b5902618-def6-4121-ac5b-efad2a9ca176",
                     "name": "DB_CHROMA_URL",
                     "value": "DB_CHROMA_URL"
+                  },
+                  {
+                    "unid": "73eb7ce6-e170-4ff7-81fb-b38bde243469",
+                    "name": "DB_QDRANT_URL",
+                    "value": "DB_QDRANT_URL"
                   }
                 ],
                 "description": ""

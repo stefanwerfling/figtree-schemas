@@ -13,6 +13,7 @@ export var ENV_DB;
     ENV_DB["DB_REDIS_URL"] = "DB_REDIS_URL";
     ENV_DB["DB_REDIS_PASSWORD"] = "DB_REDIS_PASSWORD";
     ENV_DB["DB_CHROMA_URL"] = "DB_CHROMA_URL";
+    ENV_DB["DB_QDRANT_URL"] = "DB_QDRANT_URL";
 })(ENV_DB || (ENV_DB = {}));
 export const SchemaConfigDbOptionsMySql = Vts.object({
     host: Vts.string(),
@@ -44,11 +45,17 @@ export const SchemaConfigDbOptionsChroma = Vts.object({
 }, {
     description: '',
 });
+export const SchemaConfigDbOptionsQdrant = Vts.object({
+    url: Vts.string(),
+}, {
+    description: '',
+});
 export const SchemaConfigDbOptions = Vts.object({
     mysql: Vts.optional(SchemaConfigDbOptionsMySql),
     influx: Vts.optional(SchemaConfigDbOptionsInflux),
     redis: Vts.optional(SchemaConfigDbOptionsRedis),
     chroma: Vts.optional(SchemaConfigDbOptionsChroma),
+    qdrant: Vts.optional(SchemaConfigDbOptionsQdrant),
 }, {
     description: '',
 });

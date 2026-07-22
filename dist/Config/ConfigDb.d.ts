@@ -11,7 +11,8 @@ export declare enum ENV_DB {
     'DB_INFLUX_BUCKET' = "DB_INFLUX_BUCKET",
     'DB_REDIS_URL' = "DB_REDIS_URL",
     'DB_REDIS_PASSWORD' = "DB_REDIS_PASSWORD",
-    'DB_CHROMA_URL' = "DB_CHROMA_URL"
+    'DB_CHROMA_URL' = "DB_CHROMA_URL",
+    'DB_QDRANT_URL' = "DB_QDRANT_URL"
 }
 export declare const SchemaConfigDbOptionsMySql: import("vts").ObjectSchema<{
     host: import("vts").StringSchema<import("vts").StringSchemaOptions>;
@@ -39,6 +40,10 @@ export declare const SchemaConfigDbOptionsChroma: import("vts").ObjectSchema<{
     url: import("vts").StringSchema<import("vts").StringSchemaOptions>;
 }>;
 export type ConfigDbOptionsChroma = ExtractSchemaResultType<typeof SchemaConfigDbOptionsChroma>;
+export declare const SchemaConfigDbOptionsQdrant: import("vts").ObjectSchema<{
+    url: import("vts").StringSchema<import("vts").StringSchemaOptions>;
+}>;
+export type ConfigDbOptionsQdrant = ExtractSchemaResultType<typeof SchemaConfigDbOptionsQdrant>;
 export declare const SchemaConfigDbOptions: import("vts").ObjectSchema<{
     mysql: import("vts").OptionalSchema<import("vts").ObjectSchema<{
         host: import("vts").StringSchema<import("vts").StringSchemaOptions>;
@@ -60,6 +65,9 @@ export declare const SchemaConfigDbOptions: import("vts").ObjectSchema<{
         password: import("vts").OptionalSchema<import("vts").StringSchema<import("vts").StringSchemaOptions>>;
     }>>;
     chroma: import("vts").OptionalSchema<import("vts").ObjectSchema<{
+        url: import("vts").StringSchema<import("vts").StringSchemaOptions>;
+    }>>;
+    qdrant: import("vts").OptionalSchema<import("vts").ObjectSchema<{
         url: import("vts").StringSchema<import("vts").StringSchemaOptions>;
     }>>;
 }>;

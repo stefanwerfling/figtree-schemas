@@ -33,6 +33,9 @@ export declare const SchemaConfigBackendOptions: import("vts").ObjectSchema<{
         chroma: import("vts").OptionalSchema<import("vts").ObjectSchema<{
             url: import("vts").StringSchema<import("vts").StringSchemaOptions>;
         }>>;
+        qdrant: import("vts").OptionalSchema<import("vts").ObjectSchema<{
+            url: import("vts").StringSchema<import("vts").StringSchemaOptions>;
+        }>>;
     }>;
     httpserver: import("vts").ObjectSchema<{
         port: import("vts").OptionalSchema<import("vts").NumberSchema>;

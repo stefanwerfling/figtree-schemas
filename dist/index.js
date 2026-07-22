@@ -1,7 +1,7 @@
 export { SchemaArgsBase, } from './Args/ArgsBase.js';
 export { SchemaDefaultArgs, } from './Args/DefaultArgs.js';
 export { SchemaConfigBackendOptions, } from './Config/ConfigBackendOptions.js';
-export { SchemaConfigDbOptionsMySql, SchemaConfigDbOptionsInflux, SchemaConfigDbOptionsRedis, SchemaConfigDbOptionsChroma, SchemaConfigDbOptions, ENV_DB, } from './Config/ConfigDb.js';
+export { SchemaConfigDbOptionsMySql, SchemaConfigDbOptionsInflux, SchemaConfigDbOptionsRedis, SchemaConfigDbOptionsChroma, SchemaConfigDbOptionsQdrant, SchemaConfigDbOptions, ENV_DB, } from './Config/ConfigDb.js';
 export { SchemaConfigHttpServerSession, SchemaConfigHttpServerProxy, SchemaConfigHttpServerCsrf, SchemaConfigHttpServer, } from './Config/ConfigHttpServer.js';
 export { SchemaConfigOptions, } from './Config/ConfigOptions.js';
 export { SchemaConfigClusterRespawn, SchemaConfigClusterSharedStore, SchemaConfigClusterRoles, SchemaConfigCluster, ENV_CLUSTER, ClusterSharedStoreType, } from './Config/ConfigCluster.js';

@@ -19,6 +19,8 @@ export {
     ConfigDbOptionsRedis,
     SchemaConfigDbOptionsChroma,
     ConfigDbOptionsChroma,
+    SchemaConfigDbOptionsQdrant,
+    ConfigDbOptionsQdrant,
     SchemaConfigDbOptions,
     ConfigDbOptions,
     ENV_DB,

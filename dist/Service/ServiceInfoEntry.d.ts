@@ -17,10 +17,10 @@ export declare enum ServiceImportance {
 export declare const SchemaServiceInfoScheduler: import("vts").ObjectSchema<{
     status: import("vts").EnumSchema<ServiceStatus>;
     inProcess: import("vts").BooleanSchema;
-    lastRun: import("vts").OrSchema<import("vts").NullSchema | import("vts").StringSchema<import("vts").StringSchemaOptions>>;
-    lastSuccessAt: import("vts").OrSchema<import("vts").NullSchema | import("vts").StringSchema<import("vts").StringSchemaOptions>>;
-    nextRun: import("vts").OrSchema<import("vts").NullSchema | import("vts").StringSchema<import("vts").StringSchemaOptions>>;
-    lastDurationMs: import("vts").OrSchema<import("vts").NullSchema | import("vts").NumberSchema>;
+    lastRun: import("vts").OrSchema<import("vts").StringSchema<import("vts").StringSchemaOptions> | import("vts").NullSchema>;
+    lastSuccessAt: import("vts").OrSchema<import("vts").StringSchema<import("vts").StringSchemaOptions> | import("vts").NullSchema>;
+    nextRun: import("vts").OrSchema<import("vts").StringSchema<import("vts").StringSchemaOptions> | import("vts").NullSchema>;
+    lastDurationMs: import("vts").OrSchema<import("vts").NumberSchema | import("vts").NullSchema>;
     runCount: import("vts").NumberSchema;
     failCount: import("vts").NumberSchema;
     cron: import("vts").StringSchema<import("vts").StringSchemaOptions>;
@@ -34,16 +34,16 @@ export declare const SchemaServiceInfoEntry: import("vts").ObjectSchema<{
     importance: import("vts").EnumSchema<ServiceImportance>;
     inProcess: import("vts").BooleanSchema;
     dependencies: import("vts").ArraySchema<import("vts").StringSchema<import("vts").StringSchemaOptions>>;
-    startedAt: import("vts").OrSchema<import("vts").NullSchema | import("vts").StringSchema<import("vts").StringSchemaOptions>>;
+    startedAt: import("vts").OrSchema<import("vts").StringSchema<import("vts").StringSchemaOptions> | import("vts").NullSchema>;
     restartCount: import("vts").NumberSchema;
     logBufferActive: import("vts").BooleanSchema;
     scheduler: import("vts").OptionalSchema<import("vts").ObjectSchema<{
         status: import("vts").EnumSchema<ServiceStatus>;
         inProcess: import("vts").BooleanSchema;
-        lastRun: import("vts").OrSchema<import("vts").NullSchema | import("vts").StringSchema<import("vts").StringSchemaOptions>>;
-        lastSuccessAt: import("vts").OrSchema<import("vts").NullSchema | import("vts").StringSchema<import("vts").StringSchemaOptions>>;
-        nextRun: import("vts").OrSchema<import("vts").NullSchema | import("vts").StringSchema<import("vts").StringSchemaOptions>>;
-        lastDurationMs: import("vts").OrSchema<import("vts").NullSchema | import("vts").NumberSchema>;
+        lastRun: import("vts").OrSchema<import("vts").StringSchema<import("vts").StringSchemaOptions> | import("vts").NullSchema>;
+        lastSuccessAt: import("vts").OrSchema<import("vts").StringSchema<import("vts").StringSchemaOptions> | import("vts").NullSchema>;
+        nextRun: import("vts").OrSchema<import("vts").StringSchema<import("vts").StringSchemaOptions> | import("vts").NullSchema>;
+        lastDurationMs: import("vts").OrSchema<import("vts").NumberSchema | import("vts").NullSchema>;
         runCount: import("vts").NumberSchema;
         failCount: import("vts").NumberSchema;
         cron: import("vts").StringSchema<import("vts").StringSchemaOptions>;

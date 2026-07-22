@@ -16,6 +16,7 @@ export enum ENV_DB {
     'DB_REDIS_URL' = 'DB_REDIS_URL',
     'DB_REDIS_PASSWORD' = 'DB_REDIS_PASSWORD',
     'DB_CHROMA_URL' = 'DB_CHROMA_URL',
+    'DB_QDRANT_URL' = 'DB_QDRANT_URL',
 }
 
 /**
@@ -85,6 +86,20 @@ export const SchemaConfigDbOptionsChroma = Vts.object({
 export type ConfigDbOptionsChroma = ExtractSchemaResultType<typeof SchemaConfigDbOptionsChroma>;
 
 /**
+ * Schema of ConfigDbOptionsQdrant
+ */
+export const SchemaConfigDbOptionsQdrant = Vts.object({
+    url: Vts.string(),
+}, {
+    description: '',
+});
+
+/**
+ * Type of schema ConfigDbOptionsQdrant
+ */
+export type ConfigDbOptionsQdrant = ExtractSchemaResultType<typeof SchemaConfigDbOptionsQdrant>;
+
+/**
  * Schema of ConfigDbOptions
  */
 export const SchemaConfigDbOptions = Vts.object({
@@ -92,6 +107,7 @@ export const SchemaConfigDbOptions = Vts.object({
     influx: Vts.optional(SchemaConfigDbOptionsInflux),
     redis: Vts.optional(SchemaConfigDbOptionsRedis),
     chroma: Vts.optional(SchemaConfigDbOptionsChroma),
+    qdrant: Vts.optional(SchemaConfigDbOptionsQdrant),
 }, {
     description: '',
 });
