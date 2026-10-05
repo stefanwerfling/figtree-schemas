@@ -60,6 +60,13 @@ export {
     PluginDefinition,
 } from './Plugin/PluginDefinition.js';
 export {
+    SchemaPluginUiFieldOption,
+    PluginUiFieldOption,
+    SchemaPluginUiField,
+    PluginUiField,
+    PluginUiFieldType,
+} from './Plugin/PluginUiField.js';
+export {
     SchemaProviderEntry,
     ProviderEntry,
 } from './Provider/ProviderEntry.js';

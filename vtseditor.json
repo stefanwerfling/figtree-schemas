@@ -25,5 +25,11 @@
   ],
   "server": {
     "port": 5173
+  },
+  "mcp": {
+    "enabled": true,
+    "policy": {
+      "default": "allow"
+    }
   }
 }

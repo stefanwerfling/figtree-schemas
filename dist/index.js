@@ -7,6 +7,7 @@ export { SchemaConfigOptions, } from './Config/ConfigOptions.js';
 export { SchemaConfigClusterRespawn, SchemaConfigClusterSharedStore, SchemaConfigClusterRoles, SchemaConfigCluster, ENV_CLUSTER, ClusterSharedStoreType, } from './Config/ConfigCluster.js';
 export { SchemaLoggerConfig, } from './Logger/LoggerConfig.js';
 export { SchemaPluginDefinition, } from './Plugin/PluginDefinition.js';
+export { SchemaPluginUiFieldOption, SchemaPluginUiField, PluginUiFieldType, } from './Plugin/PluginUiField.js';
 export { SchemaProviderEntry, } from './Provider/ProviderEntry.js';
 export { SchemaDefaultReturn, SchemaDefaultHandlerReturn, HandlerResultType, } from './Server/Routes/DefaultReturn.js';
 export { SchemaServiceStatusResponse, SchemaServiceByNameRequest, SchemaServiceLogStartRequest, SchemaServiceLogResponse, } from './Server/Routes/Service.js';

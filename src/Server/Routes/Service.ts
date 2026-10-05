@@ -34,7 +34,7 @@ export type ServiceByNameRequest = ExtractSchemaResultType<typeof SchemaServiceB
 
 /**
  * Schema of ServiceLogStartRequest
- * Enable the per-service ring-buffer log capture for one service.
+ * Service log start request
  */
 export const SchemaServiceLogStartRequest = Vts.object({
     name: Vts.string({description: 'Name of the service whose buffer to enable'}),
@@ -50,7 +50,7 @@ export type ServiceLogStartRequest = ExtractSchemaResultType<typeof SchemaServic
 
 /**
  * Schema of ServiceLogResponse
- * Current state of one service's ring buffer plus the captured lines.
+ * Service log buffer snapshot
  */
 export const SchemaServiceLogResponse = SchemaDefaultReturn.extend({
     active: Vts.optional(Vts.boolean({description: 'Is the buffer currently capturing for this service'})),

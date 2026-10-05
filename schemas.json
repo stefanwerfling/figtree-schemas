@@ -1496,6 +1496,227 @@
             ],
             "enums": [],
             "links": []
+          },
+          {
+            "unid": "9a8fe519-b8f7-461d-be2c-5d220a83b8bb",
+            "name": "PluginUiField",
+            "type": "file",
+            "istoggle": true,
+            "entrys": [],
+            "schemas": [
+              {
+                "unid": "ef0bcac9-64bf-4932-a161-c5b12879d015",
+                "name": "PluginUiFieldOption",
+                "description": "One selectable option of an enum field",
+                "extend": {
+                  "type": "object"
+                },
+                "pos": {
+                  "x": 1179,
+                  "y": 534
+                },
+                "fields": [
+                  {
+                    "unid": "e450ba0c-2fb4-47ff-99ef-1de0df28befe",
+                    "name": "value",
+                    "type": {
+                      "type": "string",
+                      "optional": false,
+                      "array": false,
+                      "types": []
+                    },
+                    "description": "Stored value of the option"
+                  },
+                  {
+                    "unid": "b0cfd284-1158-477d-9834-d51a3b984651",
+                    "name": "label",
+                    "type": {
+                      "type": "string",
+                      "optional": false,
+                      "array": false,
+                      "types": []
+                    },
+                    "description": "Human readable label of the option"
+                  }
+                ]
+              },
+              {
+                "unid": "c0357a9f-06d4-4fc8-9c02-8469c84b5c4e",
+                "name": "PluginUiField",
+                "description": "Declarative description of a single plugin config field",
+                "extend": {
+                  "type": "object"
+                },
+                "pos": {
+                  "x": 600,
+                  "y": 110
+                },
+                "fields": [
+                  {
+                    "unid": "acbef7d2-8a34-4326-b337-2b63875e485e",
+                    "name": "key",
+                    "type": {
+                      "type": "string",
+                      "optional": false,
+                      "array": false,
+                      "types": []
+                    },
+                    "description": "Property key the value is stored/returned under"
+                  },
+                  {
+                    "unid": "7df2af6c-857f-4059-9049-5d7f839ba20d",
+                    "name": "type",
+                    "type": {
+                      "type": "2b47a647-a327-4426-b702-f4e6d54dc96b",
+                      "optional": false,
+                      "array": false,
+                      "types": []
+                    },
+                    "description": "Field type / widget hint"
+                  },
+                  {
+                    "unid": "55ec955e-6883-4e02-ad3f-21789ea1a58d",
+                    "name": "label",
+                    "type": {
+                      "type": "string",
+                      "optional": false,
+                      "array": false,
+                      "types": []
+                    },
+                    "description": "Human readable field label"
+                  },
+                  {
+                    "unid": "ef10794d-b9c1-4762-8638-d7656df15003",
+                    "name": "description",
+                    "type": {
+                      "type": "string",
+                      "optional": true,
+                      "array": false,
+                      "types": []
+                    },
+                    "description": "Optional help text shown with the field"
+                  },
+                  {
+                    "unid": "c33ab602-ebbb-4b4e-9daf-d7d8753c0702",
+                    "name": "placeholder",
+                    "type": {
+                      "type": "string",
+                      "optional": true,
+                      "array": false,
+                      "types": []
+                    },
+                    "description": "Optional placeholder for text-like fields"
+                  },
+                  {
+                    "unid": "2101c782-ddea-4608-b7de-2ce585abc061",
+                    "name": "required",
+                    "type": {
+                      "type": "boolean",
+                      "optional": true,
+                      "array": false,
+                      "types": []
+                    },
+                    "description": "Whether a value must be provided"
+                  },
+                  {
+                    "unid": "c3564405-8d66-4dac-b8ac-b30d3535f04f",
+                    "name": "default",
+                    "type": {
+                      "type": "or",
+                      "optional": true,
+                      "array": false,
+                      "types": [
+                        {
+                          "type": "string",
+                          "optional": false,
+                          "array": false,
+                          "types": []
+                        },
+                        {
+                          "type": "number",
+                          "optional": false,
+                          "array": false,
+                          "types": []
+                        },
+                        {
+                          "type": "boolean",
+                          "optional": false,
+                          "array": false,
+                          "types": []
+                        }
+                      ]
+                    },
+                    "description": "Optional default value"
+                  },
+                  {
+                    "unid": "d760e200-7e0f-4da7-a289-4ffabe0dfca1",
+                    "name": "options",
+                    "type": {
+                      "type": "ef0bcac9-64bf-4932-a161-c5b12879d015",
+                      "optional": true,
+                      "array": true,
+                      "types": []
+                    },
+                    "description": "Selectable options, required for an enum field"
+                  },
+                  {
+                    "unid": "6b5fb427-1e47-43b1-8c68-57b9f58744e4",
+                    "name": "group",
+                    "type": {
+                      "type": "string",
+                      "optional": true,
+                      "array": false,
+                      "types": []
+                    },
+                    "description": "Optional group/section/tab the field belongs to"
+                  }
+                ]
+              }
+            ],
+            "enums": [
+              {
+                "unid": "2b47a647-a327-4426-b702-f4e6d54dc96b",
+                "name": "PluginUiFieldType",
+                "description": "Field type / widget hint for a plugin config field",
+                "pos": {
+                  "x": 1262,
+                  "y": 109
+                },
+                "values": [
+                  {
+                    "unid": "e519af43-0865-40ba-af8b-db2383118f99",
+                    "name": "string",
+                    "value": "string"
+                  },
+                  {
+                    "unid": "ba9de4c4-3cc0-4aa4-b1b1-06552a60e639",
+                    "name": "number",
+                    "value": "number"
+                  },
+                  {
+                    "unid": "e7209e25-8a2d-466a-955a-d14b43585854",
+                    "name": "bool",
+                    "value": "bool"
+                  },
+                  {
+                    "unid": "fe0f7be3-71d0-4acd-bd1e-9ec4998a20ce",
+                    "name": "password",
+                    "value": "password"
+                  },
+                  {
+                    "unid": "36bce5e8-5041-4be7-88d4-41b103adc574",
+                    "name": "enum",
+                    "value": "enum"
+                  },
+                  {
+                    "unid": "dd3d6dbe-a6c6-4531-9db5-43856d30f255",
+                    "name": "textarea",
+                    "value": "textarea"
+                  }
+                ]
+              }
+            ],
+            "links": []
           }
         ],
         "schemas": [],
@@ -2665,6 +2886,7 @@
   },
   "editor": {
     "controls_width": 488,
-    "active_entry_unid": "066c3327-efd7-4bd4-b17e-ef914c814e21"
+    "active_entry_unid": "9a8fe519-b8f7-461d-be2c-5d220a83b8bb",
+    "active_entry_table_unid": "c0357a9f-06d4-4fc8-9c02-8469c84b5c4e"
   }
 }
